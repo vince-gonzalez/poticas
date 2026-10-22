@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Accessibility — Poticas.com</title>
+<meta name="description" content="Poticas.com is built to be usable by everyone. What we have done toward WCAG 2.1 AA, our known limits, and how to report anything that is hard to use." />
+<link rel="canonical" href="https://www.poticas.com/accessibility.html" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --clr-bg:        #f5efe4;
+  --clr-surface:   #fff8ee;
+  --clr-walnut:    #3b2314;
+  --clr-walnut-mid:#6b3d24;
+  --clr-caramel:   #b86b2e;
+  --clr-gold:      #c9922a;
+  --clr-cream:     #fdf6e9;
+  --clr-ink:       #2a1a0e;
+  --clr-ink-muted: #7a5c44;
+  --clr-divider:   #d4c4a8;
+  --ff-display:    'Playfair Display', Georgia, serif;
+  --ff-body:       'Lora', 'Times New Roman', serif;
+  --ff-accent:     'Cormorant Garamond', Georgia, serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;scroll-behavior:smooth;}
+body{background:var(--clr-bg);color:var(--clr-ink);font-family:var(--ff-body);line-height:1.8;min-height:100vh;}
+a{color:var(--clr-caramel);text-decoration:none;}
+a:hover{color:var(--clr-walnut);text-decoration:underline;}
+.site-header{background:rgba(245,239,228,0.96);border-bottom:1.5px solid var(--clr-divider);padding:14px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);}
+.header-inner{max-width:860px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;}
+.logo-text{font-family:var(--ff-display);font-size:1.5rem;font-weight:900;color:var(--clr-walnut);letter-spacing:-0.02em;}
+.logo-text span{color:var(--clr-caramel);}
+.back-link{font-family:var(--ff-accent);font-size:0.95rem;color:var(--clr-walnut-mid);letter-spacing:0.04em;}
+.back-link:hover{color:var(--clr-caramel);}
+.doc-wrap{max-width:860px;margin:0 auto;padding:56px 24px 80px;}
+.doc-eyebrow{font-family:var(--ff-accent);font-size:0.82rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--clr-caramel);margin-bottom:12px;}
+.doc-title{font-family:var(--ff-display);font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--clr-walnut);margin-bottom:10px;line-height:1.1;}
+.doc-meta{font-family:var(--ff-accent);font-style:italic;color:var(--clr-ink-muted);font-size:0.95rem;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--clr-divider);}
+h2{font-family:var(--ff-display);font-size:1.35rem;font-weight:700;color:var(--clr-walnut);margin-top:40px;margin-bottom:12px;}
+p{margin-bottom:16px;font-size:0.97rem;}
+ul{margin:0 0 16px 24px;}
+li{font-size:0.97rem;margin-bottom:6px;}
+.highlight-box{background:var(--clr-surface);border-left:3px solid var(--clr-gold);border-radius:0 8px 8px 0;padding:16px 20px;margin:20px 0;font-family:var(--ff-accent);font-size:0.95rem;color:var(--clr-ink-muted);font-style:italic;}
+.site-footer{background:var(--clr-walnut);padding:28px 24px;text-align:center;font-family:var(--ff-accent);font-size:0.82rem;color:rgba(253,246,233,0.55);letter-spacing:0.04em;}
+.site-footer a{color:rgba(253,246,233,0.7);}
+.site-footer a:hover{color:var(--clr-gold);}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:9999;background:#3b2314;color:#fdf6e9;padding:10px 16px;border-radius:0 0 8px 0;font:700 1rem Georgia,serif;text-decoration:none;}
+.skip-link:focus{left:0;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#skip-target">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo-text">potica<span>s</span></a>
+    <a href="/" class="back-link">← Back to Poticas.com</a>
+  </div>
+</header>
+<span id="skip-target" tabindex="-1"></span>
+
+<main class="doc-wrap">
+  <p class="doc-eyebrow">Accessibility</p>
+  <h1 class="doc-title">Accessibility</h1>
+  <p class="doc-meta">Last reviewed: October 2026</p>
+
+  <div class="highlight-box">
+    Poticas.com should work for everyone — with a keyboard, with a screen reader, on a phone, at high zoom. We build toward WCAG 2.1 Level AA, and if any part of the site is hard to use, we want to hear about it and fix it.
+  </div>
+
+  <h2>What we have done</h2>
+  <ul>
+    <li>Semantic headings and page landmarks, so assistive technology can navigate the structure.</li>
+    <li>A "Skip to content" link on every page, to jump past the repeated header.</li>
+    <li>Text alternatives for images that carry meaning.</li>
+    <li>A keyboard-operable layout — every link and control is reachable without a mouse.</li>
+    <li>Color contrast that meets the AA threshold for body text.</li>
+    <li>A responsive layout that reflows on small screens and holds up at 200% zoom.</li>
+  </ul>
+
+  <h2>Where we know we fall short</h2>
+  <p>The community page is an interactive feature that is still being refined, and some of its controls are easier to use with a mouse than without. We are working on it. The guides, recipes, history, and the makers list are the most complete, and they are where we hold the highest bar.</p>
+
+  <h2>Tell us</h2>
+  <p>If something on the site is hard to read, hard to reach, or does not work with your assistive technology, email <a href="mailto:hello@poticas.com">hello@poticas.com</a> with the page address and what went wrong. We read every message and aim to respond within a few days.</p>
+
+  <h2>The standard we measure against</h2>
+  <p>We assess the site against the <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.1</a>, Level AA. This statement is reviewed as the site changes.</p>
+</main>
+
+<footer class="site-footer">
+  © 2026 Poticas.com — All rights reserved. &nbsp;|&nbsp;
+  <a href="/privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+  <a href="/terms.html">Terms of Service</a> &nbsp;|&nbsp;
+  <a href="/accessibility.html">Accessibility</a>
+</footer>
+
+</body>
+</html>
